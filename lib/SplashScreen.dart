@@ -1,10 +1,9 @@
 
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:intake/Dashboard.dart';
+import 'package:intake/constant.dart';
 import 'package:sizer/sizer.dart';
-import 'constant.dart';
 
 class SplashScreen extends StatefulWidget {
   static const id = "Splash Screen";
@@ -47,11 +46,13 @@ class _SplashScreenState extends State<SplashScreen> {
                                   Navigator.pushNamed(context, Dashboard.id);
                                 },
                                 animatedTexts: [
-                                  FadeAnimatedText(
+                                  TyperAnimatedText(
                                       "Intake",
+                                      speed: const Duration(milliseconds: 220),
                                       textStyle: TextStyle(
-                                        fontSize: kValue30.sp,
-                                        color: Colors.black,
+                                        fontSize: kValue40.sp,
+                                        color: kWhiteColor,
+                                        fontFamily: kFontBarlow
                                       )
                                   )
                                 ],
